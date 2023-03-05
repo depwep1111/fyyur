@@ -110,6 +110,7 @@ class VenueForm(Form):
             ('Reggae', 'Reggae'),
             ('Rock n Roll', 'Rock n Roll'),
             ('Soul', 'Soul'),
+            ('Swing', 'Swing'),
             ('Other', 'Other'),
         ]
     )
@@ -192,7 +193,7 @@ class ArtistForm(Form):
         ]
     )
     phone = StringField(
-        # TODO implement validation logic for phone 
+        # TODO implement validation logic for phone
         'phone'
     )
     image_link = StringField(

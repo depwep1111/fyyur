@@ -32,12 +32,12 @@
         <small>Ctrl+Click to select multiple</small>
         {{ form.genres(class_ = 'form-control', placeholder='Genres, separated by commas', autofocus = true) }}
       </div>
-      
+
       <div class="form-group">
           <label for="facebook_link">Facebook Link</label>
           {{ form.facebook_link(class_ = 'form-control', placeholder='http://', autofocus = true) }}
        </div>
-      
+
        <div class="form-group">
           <label for="image_link">Image Link</label>
           {{ form.image_link(class_ = 'form-control', placeholder='http://', autofocus = true) }}
@@ -61,3 +61,33 @@
     </form>
   </div>
 {% endblock %}
+<script>
+    // document.getElementById('todo-form').onsubmit = function (e) {
+    //     e.preventDefault();
+    //
+    //     fetch('/todos/create', {
+    //         method: 'POST',
+    //         body: JSON.stringify({
+    //             'description': document.getElementById('description').value,
+    //             'list_id': document.getElementById('list_id').value
+    //         }),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         }
+    //     })
+    //         .then(function (response) {
+    //             return response.json();
+    //         })
+    //         .then(function (jsonResponse) {
+    //             const liItem = document.createElement('LI');
+    //
+    //             liItem.innerHTML = jsonResponse['description'];
+    //             document.getElementById('todos').appendChild(liItem);
+    //             document.getElementById('error').className = 'hidden';
+    //             window.location.reload(true);
+    //         })
+    //         .catch(function () {
+    //             document.getElementById('error').className = '';
+    //         })
+    // }
+</script>

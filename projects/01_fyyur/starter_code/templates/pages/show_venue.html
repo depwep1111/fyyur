@@ -76,6 +76,37 @@
 </section>
 
 <a href="/venues/{{ venue.id }}/edit"><button class="btn btn-primary btn-lg">Edit</button></a>
+<button id="delete-venue" class="btn btn-danger btn-lg" data-id="{{ venue.id }}" onclick="deleteVenue('{{venue.id}}')">Delete</button>
 
+<script>
+    function deleteVenue(venueId) {
+        fetch('/venues/'+ venueId,{
+            method: 'DELETE'
+        }).then((response) => {
+            console.log(response);
+            if (response.ok) {
+                window.location.href = window.location.origin + '/';
+						}
+        }).catch(function(e) {
+                console.error(e);
+            });
+    }
+    // function deleteVenue(e) {
+    //     const deleteBtn = document.querySelectorAll(".delete-venue");
+    //     deleteBtn.onclick = function(e) {
+    //         console.log("Delete event: ", e);
+    //         const venueId = deleteBtn.target.dataset.id;
+    //         alert(venueId)
+    //         fetch('/venues/'+ venueId,{
+    //             method: 'DELETE'
+    //         }).then(function() {
+    //         })
+    //             .catch(function(e) {
+    //                 console.error(e);
+    //             });
+    //     };
+		// }
+
+</script>
 {% endblock %}
 
